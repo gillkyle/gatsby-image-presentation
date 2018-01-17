@@ -1,6 +1,9 @@
 // Import React
 import React from "react";
+
+// Import Images
 import LoadingGif from "../src/loading_example.gif";
+import Logo from "../src/logo.svg";
 
 // Import Spectacle Core tags
 import {
@@ -51,15 +54,42 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             with Gatsby.js
           </Text>
+          <Image src={Logo} height="30%" width="30%" />
+          <Link
+            textColor="quartenary"
+            textSize="1rem"
+            href="https://twitter.com/gill_kyle"
+          >
+            @gill_kyle
+          </Link>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
+          <Heading size={6} textColor="secondary" caps>
+            The Problem
+          </Heading>
+          <List>
+            <ListItem textSize="2.5rem" margin="10">
+              Crop and adjust images{" "}
+            </ListItem>
+            <ListItem textSize="2.5rem" margin="10">
+              Optimize file size, bit depth
+            </ListItem>
+            <ListItem textSize="2.5rem" margin="10">
+              Implement lazy loading
+            </ListItem>
+            <ListItem textSize="2.5rem" margin="10">
+              Mark page position, avoid "jumpiness"
+            </ListItem>
+            <ListItem textSize="2.5rem" margin="10">
+              ...
+            </ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={4} textColor="secondary">
+          <Heading size={5} textColor="secondary">
             Actual Footage of the Hawaiian Missile System
           </Heading>
-          <Image src={LoadingGif} />
-          <Text size={6} textColor="secondary">
-            Avoid situations like this.
-          </Text>
+          <Image src={LoadingGif} height="100%" width="100%" />
           <Link
             textColor="tertiary"
             textSize="1rem"
@@ -90,17 +120,6 @@ export default class Presentation extends React.Component {
           <Text size={6} textColor="secondary">
             Standard text
           </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
