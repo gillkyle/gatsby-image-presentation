@@ -120,7 +120,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary">
             Heading 1
           </Heading>
-          <CodePane editable source={CodeSample2} />
+          <CodePane source={CodeSample2} />
           <Text size={6} textColor="secondary">
             Standard text
           </Text>
