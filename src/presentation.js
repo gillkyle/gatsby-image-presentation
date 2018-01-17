@@ -63,11 +63,11 @@ export default class Presentation extends React.Component {
             @gill_kyle
           </Link>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={6} textColor="secondary" caps>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="tertiary" caps>
             The Problem
           </Heading>
-          <List>
+          <List ordered>
             <ListItem textSize="2.5rem" margin="10">
               Crop and adjust images{" "}
             </ListItem>
@@ -98,7 +98,16 @@ export default class Presentation extends React.Component {
             tweet by @tlakomy
           </Link>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <BlockQuote>
+            <Quote textSize="3rem">
+              …optimizing images can often yield some of the largest byte
+              savings and performance improvements
+            </Quote>
+            <Cite>Google PageSpeed docs</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Typography
           </Heading>
@@ -120,15 +129,6 @@ export default class Presentation extends React.Component {
           <Text size={6} textColor="secondary">
             Standard text
           </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote textSize="3rem">
-              …optimizing images can often yield some of the largest byte
-              savings and performance improvements
-            </Quote>
-            <Cite>Google PageSpeed docs</Cite>
-          </BlockQuote>
         </Slide>
       </Deck>
     );
