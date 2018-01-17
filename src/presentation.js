@@ -5,10 +5,15 @@ import React from "react";
 import LoadingGif from "../src/loading_example.gif";
 import Logo from "../src/logo.svg";
 
+// Import Code Samples
+import CodeSample1 from "../src/code_sample1.js";
+import CodeSample2 from "../src/code_sample2.js";
+
 // Import Spectacle Core tags
 import {
   BlockQuote,
   Cite,
+  CodePane,
   Deck,
   Heading,
   Image,
@@ -19,6 +24,7 @@ import {
   Text,
   Link
 } from "spectacle";
+import CodeSlide from "spectacle-code-slide";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -114,22 +120,27 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary">
             Heading 1
           </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
+          <CodePane editable source={CodeSample2} />
           <Text size={6} textColor="secondary">
             Standard text
           </Text>
         </Slide>
+        <CodeSlide
+          bgColor="quartenary"
+          transition={["slide"]}
+          lang="js"
+          code={CodeSample1}
+          ranges={[
+            { loc: [0, 270], title: "Walking through some code" },
+            { loc: [0, 1], title: "The Beginning" },
+            { loc: [1, 2] },
+            { loc: [1, 2], note: "Heres a note!" },
+            { loc: [2, 3] },
+            { loc: [4, 7] },
+            { loc: [8, 10] }
+            // ...
+          ]}
+        />
       </Deck>
     );
   }
