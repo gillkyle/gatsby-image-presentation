@@ -1,5 +1,4 @@
-const CodeSample2 = `
-import React from "react"; 
+const CodeSample2 = `import React from "react"; 
 	const Header = props => (
 	<header className="header">
 		<img

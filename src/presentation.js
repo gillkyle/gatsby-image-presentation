@@ -3,6 +3,8 @@ import React from "react";
 
 // Import Images
 import LoadingGif from "../src/loading_example.gif";
+import FastLoadingGif from "../src/fast_load.gif";
+import SlowLoadingGif from "../src/slow_loading.gif";
 import Logo from "../src/logo.svg";
 
 // Import Code Samples
@@ -73,6 +75,9 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="tertiary" caps>
             The Problem
           </Heading>
+          <Text margin="10px 0 0" textColor="quartenary" size={4} fit bold>
+            traditionally a time-consuming process:
+          </Text>
           <List ordered>
             <ListItem textSize="2.5rem" margin="10">
               Crop and adjust images{" "}
@@ -92,7 +97,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={5} textColor="secondary">
+          <Heading size={1} fit caps textColor="secondary">
             Actual Footage of the Hawaiian Missile System
           </Heading>
           <Image src={LoadingGif} height="100%" width="100%" />
@@ -113,19 +118,27 @@ export default class Presentation extends React.Component {
             <Cite>Google PageSpeed docs</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="tertiary" caps>
+            The Solution
           </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <CodePane source={CodeSample2} />
-          <Text size={6} textColor="secondary">
-            Standard text
+          <Text margin="10px 0 0" textColor="quartenary" size={4}>
+            before:
           </Text>
+          <CodePane source={CodeSample2} width="50%" />
+          <Image src={SlowLoadingGif} height="50%" width="50%" />
         </Slide>
-        <CodeSlide
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="tertiary" caps>
+            The Solution
+          </Heading>
+          <Text margin="10px 0 0" textColor="quartenary" size={4}>
+            after:
+          </Text>
+          <CodePane source={CodeSample2} width="50%" />
+          <Image src={FastLoadingGif} height="50%" width="50%" />
+        </Slide>
+        {/* <CodeSlide
           bgColor="quartenary"
           transition={["slide"]}
           lang="js"
@@ -140,7 +153,7 @@ export default class Presentation extends React.Component {
             { loc: [8, 10] }
             // ...
           ]}
-        />
+        /> */}
       </Deck>
     );
   }
