@@ -1,4 +1,4 @@
-const CodeSample1 = ` // imports
+const CodeSample1 = `// imports
 // ...
 
 class TemplateWrapper extends React.Component {

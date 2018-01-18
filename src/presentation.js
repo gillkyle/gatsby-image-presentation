@@ -10,11 +10,13 @@ import Logo from "../src/logo.svg";
 // Import Code Samples
 import CodeSample1 from "../src/code_sample1.js";
 import CodeSample2 from "../src/code_sample2.js";
+import CodeSample3 from "../src/code_sample3.js";
 
 // Import Spectacle Core tags
 import {
   BlockQuote,
   Cite,
+  Code,
   CodePane,
   Deck,
   Heading,
@@ -135,8 +137,22 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="quartenary" size={4}>
             after:
           </Text>
-          <CodePane source={CodeSample2} width="50%" />
+          <CodePane source={CodeSample3} width="50%" />
           <Image src={FastLoadingGif} height="50%" width="50%" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="tertiary" caps>
+            The Solution
+          </Heading>
+          <Text margin="10px 0 0" textColor="quartenary" size={4}>
+            passing the data through props via GraphQL:
+          </Text>
+          <CodePane source={CodeSample1} />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Code textColor="quartenary" size={4}>
+            presentation.end()
+          </Code>
         </Slide>
         {/* <CodeSlide
           bgColor="quartenary"

@@ -7,6 +7,7 @@ const CodeSample2 = `import React from "react";
 			src="../img/header.jpg"
 		/>
 	</header>
-); export default Header;`;
+); 
+export default Header;`;
 
 export default CodeSample2;
