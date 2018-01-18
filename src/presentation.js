@@ -122,21 +122,15 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
           <Heading size={6} textColor="tertiary" caps>
-            The Solution
+            The Solution (before)
           </Heading>
-          <Text margin="10px 0 0" textColor="quartenary" size={4}>
-            before:
-          </Text>
           <CodePane source={CodeSample2} width="50%" />
           <Image src={SlowLoadingGif} height="50%" width="50%" />
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
           <Heading size={6} textColor="tertiary" caps>
-            The Solution
+            The Solution (after)
           </Heading>
-          <Text margin="10px 0 0" textColor="quartenary" size={4}>
-            after:
-          </Text>
           <CodePane source={CodeSample3} width="50%" />
           <Image src={FastLoadingGif} height="50%" width="50%" />
         </Slide>
